@@ -1,0 +1,13 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+  - frontend-deployment.yaml
+  - frontend-service.yaml
+
+namePrefix: frontend-
+labels:
+  - pairs:
+      tier: frontend
+    includeSelectors: true
+    includeTemplates: true
