@@ -4,6 +4,5 @@ metadata:
   name: service
 spec:
   selector:
-  ports:
-    - {}
+  ports: []
   type:

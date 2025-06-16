@@ -48,7 +48,7 @@ patches:
       - op: add
         path: /spec/replicas
         value: 2                      # Number of frontend replicas
-      - op: replace
+      - op: add
         path: /spec/template/spec/containers/0
         value:
           name: frontend-app          # Frontend container name
@@ -61,7 +61,7 @@ patches:
 
   # Frontend Service Patch
   - patch: |-
-      - op: replace
+      - op: add
         path: /spec/ports/0
         value:
           protocol: TCP
@@ -79,7 +79,7 @@ patches:
       - op: add
         path: /spec/replicas
         value: 2                      # Number of backend replicas
-      - op: replace
+      - op: add
         path: /spec/template/spec/containers/0
         value:
           name: backend-api           # Backend container name
@@ -92,7 +92,7 @@ patches:
 
   # Backend Service Patch
   - patch: |-
-      - op: replace
+      - op: add
         path: /spec/ports/0
         value:
           protocol: TCP

@@ -10,5 +10,4 @@ spec:
     metadata:
       labels:
     spec:
-      containers:
-        - {}
+      containers: []
